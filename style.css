@@ -1,5 +1,6 @@
 :root{
-    --lavander: #e7e7e7
+    --lavander: #e7e7e7;
+    --TextColor: #607272;
 }
 
 *{
@@ -48,6 +49,12 @@ h1,h2,h3,h4,p,a {
         background-position: 200% 50%;
      }
     } */
+
+.logo a img{
+    width: 85px;
+    height: auto;
+}
+
 .header ul{
     display: flex;
     gap: 3rem;
@@ -94,7 +101,7 @@ li:hover::after {
     width: 0px;
     height: 1px;
     display: block;
-    background: black;
+    background: black(62, 62, 62);
     transition: 500ms;
     position: relative;
     top: 3px;
@@ -112,10 +119,10 @@ li:hover::after {
     background-image: url(./assets/img/2-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
+    position: relative;
     z-index: 2;
     /* top: 76px; */
-    filter: blur(3px);
+    filter: blur(4px);
 }
 
 .banh2{
@@ -137,14 +144,235 @@ li:hover::after {
     flex-direction: column;
     gap: 5px;
     font-variant-caps: all-small-caps;
-    color: #607272;
+    color: var(--TextColor);
     align-items: center;
     z-index: 2;
 }
 
 #bannerText p {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 40px;
     max-width: 600px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* products */
+
+.products{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom:15vh;
+}
+
+.product{
+    display: flex;
+    justify-content: space-around;
+}
+
+h3{
+    margin: 32px;
+    font-size: 50px ;
+    color: var(--TextColor);
+    font-weight: 700;
+    font-variant-caps: all-small-caps;
+}
+
+.productDiv {
+    border: 1px solid #667676;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.productDiv div img {
+    padding: 30px 30px 15px 30px;
+    width: 189px;
+    height: 326px;
+    object-fit: cover;
+}
+
+.productDivText {
+    background-color: #5f6f6f;
+    color: #cfdddd;
+    padding: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    width: 266px;
+    transition: .2s;
+}
+
+.productDivText:hover{
+    background-color: #879c9c;
+}
+
+.productDivText a{  
+    color: #e4f4f4;
+    padding: 10px;
+    line-height: 30px;
+}
+
+/* About Us */
+
+.AboutUs{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.AboutUs h3{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.aboutText{
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutText a{
+    width: 70px;
+    padding: 7px 15px;
+    background-color: #9bb1b1;
+    color: white;
+    margin-top: 10px;
+    border-radius: 50px;
+    transition: .2s;
+}
+
+.aboutText a:hover{
+    background-color: #829f9f;
+}
+
+.aboutPhoto img{
+    width: 500px;
+    height: 350px;
+}
+
+
+/* why us */
+
+.whyus {
+    margin-bottom: 10vh;
+}
+
+.whyus h3{
+    display: flex;
+    justify-content: center;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.benefitDiv {
+    border: 1px solid #ccc; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    height: 270px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;    
+    cursor: pointer;
+    transition: .2s;
+}
+
+.benefitDiv div img {
+    width: 90px;
+    height: 90px;
+}
+
+.benefitText {
+   margin-top: 50px;
+}
+
+.benefitDiv:hover{
+    transform: scale(1.05);
+    background-color:#7f9494;
+}
+
+
+/* contact */
+
+.Contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.map-container {
+    max-width: 600px;
+    height: 500px;
+    padding: 10px 20px;
+}
+
+.contactText{
+    width: 500px;
+    height: 500px;
+}
+
+
+/* footer */
+
+.footer{
+    display: flex;
+    background-color: #648787;
+    height: 65px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact ul{
+    display: flex;
+    gap: 15px;
+}
+
+.contact ul li{
+    color: white;
+}
+
+.contact ul li i{
+    color: #c7c2c2;
+}
+
+.soc-media {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.soc-media ul{
+    display: flex;
+    gap:0;
+}
+
+.soc-media ul li{
+    font-size: 16px;
+    margin: 3px;
+}
+
+.frame{
+    background-color: #939191;
+    padding: 5px 6px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.line{
+    margin-top: 80px;
+    height: 1px;
+    background-color: rgb(245, 231, 231);
+    width: 1200px;
+}
